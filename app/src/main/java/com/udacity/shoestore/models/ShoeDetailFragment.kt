@@ -8,10 +8,6 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.activityViewModels
-import androidx.lifecycle.LifecycleOwner
-import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.observe
 import androidx.navigation.findNavController
 import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentShoeDetailBinding
@@ -37,7 +33,9 @@ class ShoeDetailFragment : Fragment() {
         )
 
         cancelAction()
-        addShoe()
+
+        //FOR TESTING
+        testShoe()
 
         //binding.shoeListViewModel = viewModel
 
@@ -46,7 +44,8 @@ class ShoeDetailFragment : Fragment() {
         return binding.root
     }
 
-    private fun addShoe() {
+    //TESTING - REMOVE WHEN DONE
+    private fun testShoe() {
         binding.buttonTest.setOnClickListener {
             val displayShoe = viewModel.shoeList.value?.elementAt(0)
             if (displayShoe != null) {
