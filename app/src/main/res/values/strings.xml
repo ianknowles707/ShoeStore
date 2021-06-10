@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">ShoeStore</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="user_prompt">Username:</string>
+    <string name="password_prompt">Password:</string>
+    <string name="login_button">Login with account details</string>
+    <string name="button_create_new_account">Create new account</string>
+    <string name="button_instructions">Click for instructions</string>
+    <string name="shoes_image">shoes_image</string>
+    <string name="welcome_login">You are logged in as %1$s</string>
+    <string name="welcome_new">New account created for %1$s</string>
+    <string name="proceed_text">Please click the button below to continue</string>
+    <string name="button_to_shoe_list">Shoe List</string>
+    <string name="title_instructions">Instructions</string>
+    <string name="instructions">
+        This will be the text of the instructions when I know what I am going to write here \n
+        \n
+        Current text is just to get an idea of how it will display
+
+    </string>
+    <string name="shoe_list_title">Shoe models available:</string>
+    <string name="add_new_shoe">Add new shoe</string>
+    <string name="shoe_name">Shoe Name</string>
+    <string name="prompt_shoe_name">Enter shoe name</string>
+    <string name="company_label">Company</string>
+    <string name="shoe_size_label">Shoe size</string>
+    <string name="description_label">Description</string>
+    <string name="save_button">Save</string>
+    <string name="cancel_button">Cancel</string>
+</resources>

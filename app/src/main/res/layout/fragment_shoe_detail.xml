@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="shoeListViewModel"
+            type="com.udacity.shoestore.models.ShoeListViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/padding_normal"
+        tools:context=".models.ShoeDetailFragment">
+
+        <TextView
+            android:id="@+id/text_view_name_label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_normal"
+            android:text="@string/shoe_name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/edit_text_shoe_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_large"
+            android:hint="@string/shoe_name"
+            android:importantForAutofill="no"
+            android:inputType="textCapWords"
+            android:text="@={shoeListViewModel.newShoe.name}"
+            app:layout_constraintBaseline_toBaselineOf="@+id/text_view_name_label"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/text_view_name_label" />
+
+        <TextView
+            android:id="@+id/text_view_company_label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_extra_large"
+            android:text="@string/company_label"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_view_name_label" />
+
+        <EditText
+            android:id="@+id/edit_text_company_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/company_label"
+            android:importantForAutofill="no"
+            android:inputType="textCapWords"
+            android:text="@={shoeListViewModel.newShoe.company}"
+            app:layout_constraintBaseline_toBaselineOf="@+id/text_view_company_label"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/edit_text_shoe_name" />
+
+        <TextView
+            android:id="@+id/text_view_size_label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_extra_large"
+            android:text="@string/shoe_size_label"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_view_company_label" />
+
+        <EditText
+            android:id="@+id/edit_text_size"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/shoe_size_label"
+            android:importantForAutofill="no"
+            android:inputType="numberDecimal"
+            android:text="@={`` + shoeListViewModel.newShoe.size}"
+            app:layout_constraintBaseline_toBaselineOf="@+id/text_view_size_label"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/edit_text_shoe_name" />
+
+        <TextView
+            android:id="@+id/text_view_description_label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_extra_large"
+            android:text="@string/description_label"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_view_size_label" />
+
+        <EditText
+            android:id="@+id/edit_text_description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/description_label"
+            android:importantForAutofill="no"
+            android:inputType="textMultiLine"
+            android:text="@={shoeListViewModel.newShoe.description}"
+            app:layout_constraintBaseline_toBaselineOf="@+id/text_view_description_label"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/edit_text_shoe_name" />
+
+        <Button
+            android:id="@+id/button_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/save_button"
+            app:layout_constraintBaseline_toBaselineOf="@+id/button_cancel"
+            app:layout_constraintEnd_toStartOf="@+id/button_cancel"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/button_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cancel_button"
+            android:onClick="@{()-> shoeListViewModel.addNewShoe(shoeListViewModel.newShoe)}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button_save"
+            app:layout_constraintTop_toBottomOf="@+id/edit_text_description"
+            app:layout_constraintVertical_bias="0.19" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button_test"
+            android:text="TEST"
+            app:layout_constraintTop_toBottomOf="@id/button_save"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
