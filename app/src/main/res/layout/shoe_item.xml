@@ -1,54 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="@dimen/padding_normal">
+<layout>
 
+    <data>
+        <variable
+            name="shoeListViewModel"
+            type="com.udacity.shoestore.models.ShoeListViewModel" />
 
-    <TextView
-        android:id="@+id/text_view_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margin_normal"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:text="RA II" />
+    </data>
 
-    <TextView
-        android:id="@+id/text_view_company"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margin_normal"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/text_view_name"
-        tools:text="VivoBarefoot" />
-
-    <TextView
-        android:id="@+id/text_view_size"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBaseline_toBaselineOf="@+id/textView2"
-        app:layout_constraintEnd_toEndOf="parent"
-        tools:text="9" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBaseline_toBaselineOf="@+id/text_view_company"
-        app:layout_constraintEnd_toStartOf="@id/text_view_size"
-        tools:text="Size: " />
-
-    <TextView
-        android:id="@+id/text_view_description"
+<!--    Using constraint layout to align all of the various elements of the item list-->
+<!--    This is not a simple linear format and would be overly complex with LinearLayout-->
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margin_normal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/text_view_company"
-        tools:text="A description of the shoe will go here when one is available" />
+        android:layout_height="match_parent"
+        android:padding="@dimen/padding_normal">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/text_view_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_normal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="RA II" />
+
+        <TextView
+            android:id="@+id/text_view_company"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_normal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_view_name"
+            tools:text="VivoBarefoot" />
+
+        <TextView
+            android:id="@+id/text_view_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textViewSizeLabel"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="9" />
+
+        <TextView
+            android:id="@+id/textViewSizeLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBaseline_toBaselineOf="@+id/text_view_company"
+            app:layout_constraintEnd_toStartOf="@id/text_view_size"
+            tools:text="Size: " />
+
+        <TextView
+            android:id="@+id/text_view_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_view_company"
+            tools:text="A description of the shoe will go here when one is available" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

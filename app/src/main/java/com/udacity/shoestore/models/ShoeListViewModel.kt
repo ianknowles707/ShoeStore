@@ -6,32 +6,35 @@ import androidx.lifecycle.ViewModel
 
 class ShoeListViewModel : ViewModel() {
 
-    private var _shoeList = MutableLiveData<MutableList<Shoe>>()
+    //Create a private temporary list for adding Shoe objects to
+    private val _shoes: MutableList<Shoe> = mutableListOf()
 
+    //Create the MutableLiveDate for the Shoe list
+    private val _shoeList = MutableLiveData<MutableList<Shoe>>()
+
+    //Create the LiveData that will be observed by the Fragment
     val shoeList: LiveData<MutableList<Shoe>>
         get() = _shoeList
 
-    var newShoe: Shoe = Shoe("", 0.0, "","")
+    //Initialize a variable 'newShoe' to take values from the UI
+    var newShoe: Shoe = Shoe("", 0.0, "", "")
 
+    private val _lastShoe = MutableLiveData<Shoe>()
+
+    val lastShoe: LiveData<Shoe>
+        get() = _lastShoe
 
     init {
 
-        //Testing
-        val testShoe: Shoe = Shoe(
-            "RA II",
-            9.5,
-            "Vivobarefoot",
-            "Minimal"
-        )
-        _shoeList.value?.add(testShoe)
-        ///
-
     }
 
+    //Add shoe function called directly from SAVE button
     fun addNewShoe(shoe: Shoe) {
-
-        shoeList.value?.add(shoe)
-
+        //Add the Shoe to the temp. list
+        _shoes.add(shoe)
+        //Add the values to the MutableLiveData
+        _shoeList.value = _shoes
+        _lastShoe.value= shoeList.value?.last()
     }
 
 

@@ -5,7 +5,9 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
+        <variable
+            name="shoeListViewModel"
+            type="com.udacity.shoestore.models.ShoeListViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -26,6 +28,9 @@
                 android:orientation="vertical"
                 tools:context=".models.ShoeListFragment">
 
+                <include
+                    android:id="@+id/included_list_item"
+                    layout="@layout/shoe_item"/>
 
             </LinearLayout>
 

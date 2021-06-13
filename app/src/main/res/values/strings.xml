@@ -13,9 +13,12 @@
     <string name="button_to_shoe_list">Shoe List</string>
     <string name="title_instructions">Instructions</string>
     <string name="instructions">
-        This will be the text of the instructions when I know what I am going to write here \n
-        \n
-        Current text is just to get an idea of how it will display
+        This app allows you to create a shoe inventory list by entering te details of
+        all shoes currently in stock \n\n
+
+        Shoes are displayed on a list screen. A plus button in the lower right corner
+        of the list page will open 'New Shoe' entry form to add detail of the next item
+        for inclusion in the list.
 
     </string>
     <string name="shoe_list_title">Shoe models available:</string>
@@ -23,7 +26,7 @@
     <string name="shoe_name">Shoe Name</string>
     <string name="prompt_shoe_name">Enter shoe name</string>
     <string name="company_label">Company</string>
-    <string name="shoe_size_label">Shoe size</string>
+    <string name="shoe_size_label">Shoe size: </string>
     <string name="description_label">Description</string>
     <string name="save_button">Save</string>
     <string name="cancel_button">Cancel</string>

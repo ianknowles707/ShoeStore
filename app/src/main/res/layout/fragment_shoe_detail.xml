@@ -106,6 +106,7 @@
             android:id="@+id/button_save"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="@{()-> shoeListViewModel.addNewShoe(shoeListViewModel.newShoe)}"
             android:text="@string/save_button"
             app:layout_constraintBaseline_toBaselineOf="@+id/button_cancel"
             app:layout_constraintEnd_toStartOf="@+id/button_cancel"
@@ -117,21 +118,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/cancel_button"
-            android:onClick="@{()-> shoeListViewModel.addNewShoe(shoeListViewModel.newShoe)}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/button_save"
             app:layout_constraintTop_toBottomOf="@+id/edit_text_description"
             app:layout_constraintVertical_bias="0.19" />
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/button_test"
-            android:text="TEST"
-            app:layout_constraintTop_toBottomOf="@id/button_save"
-            app:layout_constraintStart_toStartOf="parent"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
