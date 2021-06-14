@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
         <variable
@@ -10,9 +12,7 @@
 
 <!--    Using constraint layout to align all of the various elements of the item list-->
 <!--    This is not a simple linear format and would be overly complex with LinearLayout-->
-    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="@dimen/padding_normal">
@@ -23,6 +23,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_normal"
+            android:fontFamily="@font/roboto"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/text_heading"
+            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:text="RA II" />
@@ -32,6 +36,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_normal"
+            android:fontFamily="@font/roboto"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/text_body"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/text_view_name"
             tools:text="VivoBarefoot" />
@@ -40,6 +47,10 @@
             android:id="@+id/text_view_size"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/text_body"
+            android:textStyle="bold"
             app:layout_constraintBaseline_toBaselineOf="@+id/textViewSizeLabel"
             app:layout_constraintEnd_toEndOf="parent"
             tools:text="9" />
@@ -48,6 +59,9 @@
             android:id="@+id/textViewSizeLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/text_body"
             app:layout_constraintBaseline_toBaselineOf="@+id/text_view_company"
             app:layout_constraintEnd_toStartOf="@id/text_view_size"
             tools:text="Size: " />
@@ -57,6 +71,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_normal"
+            android:fontFamily="@font/roboto"
+            android:textSize="@dimen/text_body"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/text_view_company"
