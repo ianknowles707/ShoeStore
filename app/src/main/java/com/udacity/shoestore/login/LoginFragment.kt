@@ -96,7 +96,7 @@ class LoginFragment : Fragment() {
     }
 
     //Perform the navigation
-    fun actionNavigation() {
+    private fun actionNavigation() {
         view?.findNavController()
             ?.navigate(
                 LoginFragmentDirections.actionLoginFragmentToWelcomeFragment(

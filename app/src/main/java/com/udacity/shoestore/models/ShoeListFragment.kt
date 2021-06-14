@@ -48,8 +48,10 @@ class ShoeListFragment : Fragment() {
 
     private fun displayShoeList() {
 
+        //Set observer to check for update to teh viewModel data
         viewModel.shoeList.observe(viewLifecycleOwner, {
 
+            //Inflate and add new layout item for the last shoe entry
             shoeLayout =
                 LayoutInflater.from(context).inflate(
                     R.layout.shoe_item,
@@ -78,13 +80,14 @@ class ShoeListFragment : Fragment() {
             getString(R.string.shoe_size_label)
     }
 
-
+    //Check for FAB click to navigate to the detail Fragment
     private fun addNewShoe() {
         binding.fabAddShoe.setOnClickListener {
             view?.findNavController()
                 ?.navigate(ShoeListFragmentDirections.actionShoeListFragmentToShoeDetailFragment())
         }
     }
+
     //Set up the menu
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         super.onCreateOptionsMenu(menu, inflater)

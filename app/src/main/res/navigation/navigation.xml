@@ -69,7 +69,6 @@
             app:destination="@id/shoeListFragment"
             app:enterAnim="@anim/slide_in_left"
             app:exitAnim="@anim/slide_out_right"
-            app:popUpTo="@id/shoeListFragment"
-            app:popUpToInclusive="true" />
+            app:popUpTo="@id/shoeListFragment" />
     </fragment>
 </navigation>

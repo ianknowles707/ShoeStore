@@ -1,13 +1,9 @@
 package com.udacity.shoestore
 
 import android.os.Bundle
-import android.view.Menu
-import android.view.MenuInflater
-import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.NavController
-import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI
@@ -35,8 +31,7 @@ class MainActivity : AppCompatActivity() {
         appBarConfiguration = AppBarConfiguration(navController.graph)
         binding.toolbar.setupWithNavController(navController, appBarConfiguration)
         //Enable the menu support
-        setSupportActionBar(binding.toolbar)
-        //Include menu item - wil lbe selectively enabled in Fragments
+        //setSupportActionBar(binding.toolbar)
 
     }
 
@@ -44,7 +39,6 @@ class MainActivity : AppCompatActivity() {
     override fun onNavigateUp(): Boolean {
         return NavigationUI.navigateUp(navController, appBarConfiguration)
     }
-
 
 
 }
