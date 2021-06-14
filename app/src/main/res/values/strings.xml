@@ -17,7 +17,7 @@
         all shoes currently in stock \n\n
 
         Shoes are displayed on a list screen. A plus button in the lower right corner
-        of the list page will open 'New Shoe' entry form to add detail of the next item
+        of the list page will open \'New Shoe\' entry form to add detail of the next item
         for inclusion in the list.
 
     </string>
@@ -30,4 +30,5 @@
     <string name="description_label">Description</string>
     <string name="save_button">Save</string>
     <string name="cancel_button">Cancel</string>
+    <string name="option_logout_text">Logout</string>
 </resources>
