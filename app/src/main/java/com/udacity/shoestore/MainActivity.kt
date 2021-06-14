@@ -34,7 +34,8 @@ class MainActivity : AppCompatActivity() {
         navController = navHostFragment.navController
         appBarConfiguration = AppBarConfiguration(navController.graph)
         binding.toolbar.setupWithNavController(navController, appBarConfiguration)
-
+        //Enable the menu support
+        setSupportActionBar(binding.toolbar)
         //Include menu item - wil lbe selectively enabled in Fragments
 
     }
