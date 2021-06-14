@@ -38,29 +38,8 @@ class LoginFragment : Fragment() {
         loginAction()
         createNewAccount()
 
-
-        //
-        //TESTING ONLY - REMOVE WHEN DONE
-        //
-        skip()
-        //
-        //
-
-
         return binding.root
     }
-
-    //
-    //TESTING - REMOVE WHEN DONE
-    //
-    private fun skip() {
-        binding.buttonSkip.setOnClickListener {
-            view?.findNavController()
-                ?.navigate(LoginFragmentDirections.actionLoginFragmentToShoeListFragment())
-        }
-    }
-    //
-    //
 
 
     //Function handles the response to clicking the login button, including the call

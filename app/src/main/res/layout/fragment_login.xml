@@ -73,13 +73,6 @@
             android:layout_marginTop="@dimen/margin_large"
             android:text="@string/login_button" />
 
-<!--        Testing purposes only - to remove-->
-        <Button
-            android:id="@+id/button_skip"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin_large"
-            android:text="SKIP" />
     </LinearLayout>
     </ScrollView>
 </layout>

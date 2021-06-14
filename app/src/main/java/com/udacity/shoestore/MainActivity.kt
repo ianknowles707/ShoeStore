@@ -34,6 +34,9 @@ class MainActivity : AppCompatActivity() {
         navController = navHostFragment.navController
         appBarConfiguration = AppBarConfiguration(navController.graph)
         binding.toolbar.setupWithNavController(navController, appBarConfiguration)
+
+        //Include menu item - wil lbe selectively enabled in Fragments
+
     }
 
     //Ensure correct action on use of system back button
