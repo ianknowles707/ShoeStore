@@ -29,9 +29,10 @@ class MainActivity : AppCompatActivity() {
         navHostFragment = supportFragmentManager .findFragmentById(R.id.navHostFragment) as NavHostFragment
         navController = navHostFragment.navController
         appBarConfiguration = AppBarConfiguration(navController.graph)
-        binding.toolbar.setupWithNavController(navController, appBarConfiguration)
+
         //Enable the menu support
-        //setSupportActionBar(binding.toolbar)
+        setSupportActionBar(binding.toolbar)
+        binding.toolbar.setupWithNavController(navController, appBarConfiguration)
 
     }
 
@@ -39,6 +40,5 @@ class MainActivity : AppCompatActivity() {
     override fun onNavigateUp(): Boolean {
         return NavigationUI.navigateUp(navController, appBarConfiguration)
     }
-
 
 }

@@ -42,7 +42,6 @@ class ShoeDetailFragment : Fragment() {
     //ShoeList destination
     private fun saveAction() {
         viewModel.shoeList.observe(viewLifecycleOwner, {
-
                     view?.findNavController()
                 ?.navigate(ShoeDetailFragmentDirections.actionShoeDetailFragmentToShoeListFragment())
         })
@@ -51,7 +50,6 @@ class ShoeDetailFragment : Fragment() {
     //Link the CANCEL button directly to the navigation action (no other action required)
     private fun cancelAction() {
         binding.buttonCancel.setOnClickListener {
-
             view?.findNavController()
                 ?.navigate(ShoeDetailFragmentDirections.actionShoeDetailFragmentToShoeListFragment())
         }
