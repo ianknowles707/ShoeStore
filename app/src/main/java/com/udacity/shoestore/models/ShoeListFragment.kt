@@ -50,7 +50,8 @@ class ShoeListFragment : Fragment() {
         viewModel.shoeList.observe(viewLifecycleOwner, {
 
             viewModel.shoeList.value?.forEach {
-                //Inflate and add new layout item for the last shoe entry
+                //Inflate and add new layout item for the last shoe entry. Assistance given
+                //through the Udacity Knowledge site to resolve issue with this part
 
                 val shoeLayoutBinding = ShoeItemBinding.inflate(
                     LayoutInflater.from(requireContext()),
