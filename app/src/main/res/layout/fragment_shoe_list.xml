@@ -28,9 +28,6 @@
                 android:orientation="vertical"
                 tools:context=".models.ShoeListFragment">
 
-                <include
-                    android:id="@+id/included_list_item"
-                    layout="@layout/shoe_item"/>
 
             </LinearLayout>
 

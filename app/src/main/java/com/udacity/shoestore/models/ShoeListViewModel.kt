@@ -16,25 +16,21 @@ class ShoeListViewModel : ViewModel() {
     val shoeList: LiveData<MutableList<Shoe>>
         get() = _shoeList
 
-    //Initialize a variable 'newShoe' to take values from the UI
-    var newShoe: Shoe = Shoe("", 0.0, "", "")
+    //Temp variables to allocate data from EditText fields
+    var shoeName: String  = ""
+    var shoeCompany: String  = ""
+    var shoeSize: String = ""
+    var shoeDescription: String = ""
 
-    private val _lastShoe = MutableLiveData<Shoe>()
-
-    val lastShoe: LiveData<Shoe>
-        get() = _lastShoe
-
-    init {
-
-    }
 
     //Add shoe function called directly from SAVE button
-    fun addNewShoe(shoe: Shoe) {
+    fun addNewShoe(name: String, size: String, company: String, desc: String) {
+        val newShoe = Shoe(name, size, company, desc)
         //Add the Shoe to the temp. list
-        _shoes.add(shoe)
+        _shoes.add(newShoe)
         //Add the values to the MutableLiveData
         _shoeList.value = _shoes
-        _lastShoe.value= shoeList.value?.last()
+
     }
 
 

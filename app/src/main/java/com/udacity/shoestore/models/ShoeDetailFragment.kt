@@ -7,11 +7,7 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
-import androidx.navigation.Navigation
 import androidx.navigation.findNavController
-import androidx.navigation.fragment.findNavController
-import androidx.navigation.ui.NavigationUI
-import androidx.navigation.ui.navigateUp
 import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentShoeDetailBinding
 
@@ -46,7 +42,12 @@ class ShoeDetailFragment : Fragment() {
     //ShoeList destination
     private fun saveAction() {
         binding.buttonSave.setOnClickListener {
-            viewModel.addNewShoe(viewModel.newShoe)
+            viewModel.addNewShoe(
+                viewModel.shoeName,
+                viewModel.shoeSize,
+                viewModel.shoeCompany,
+                viewModel.shoeDescription
+            )
             view?.findNavController()?.navigateUp()
         }
     }
